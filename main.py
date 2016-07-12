@@ -12,6 +12,7 @@ __email__   = "ehcapa@qq.com"
 
 def main():
     app = QtGui.QApplication(sys.argv)
+    app.setStyle("cleanlooks")
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
