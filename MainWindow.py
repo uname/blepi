@@ -21,4 +21,4 @@ class MainWindow(QtGui.QMainWindow):
         
     
     def onScanButtonClicked(self):
-        self.scanDialog.show()
+        self.scanDialog.show_()
