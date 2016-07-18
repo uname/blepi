@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+from ble.BLEHelper import bleHelper
 
 class ScanDialogDelegate(object):
 
@@ -6,4 +7,4 @@ class ScanDialogDelegate(object):
         pass
         
     def startBLEScan(self):
-        pass
+        bleHelper.startScan()
