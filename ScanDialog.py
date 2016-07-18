@@ -27,8 +27,8 @@ class ScanDialog(QtGui.QDialog):
         self.ui.cancelButton.clicked.connect(self.onCancelButtonClicked)
         self.connect(sigObject, signals.BLE_INFO_UPDATE, self.onBLEInfoUpdate)
     
-    def onBLEInfoUpdate(self, name, rssi):
-        logger.debug("BLE -> %s(%d)" % (name, rssi))
+    def onBLEInfoUpdate(self, addr, rssi):
+        logger.debug("BLE -> %s(%d)" % (addr, rssi))
         
     def setUiOnShow(self):
         self.ui.tipLabel.setText("Scanning...")
