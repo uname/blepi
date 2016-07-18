@@ -8,5 +8,10 @@ class ScanDelegate(DefaultDelegate):
         DefaultDelegate.__init__(self)
         
     def handleDiscovery(self, dev, isNewDev, isNewData):
-        logger.debug("%d[%d]" % (dev.addr, dev.rssi))
+        logger.debug("%s[%d]" % (dev.addr, dev.rssi))
         
+
+if __name__ == "__main__":
+    from bluepy.btle import Scanner
+    scanner = Scanner().withDelegate(ScanDelegate())
+    scanner.scan(4)

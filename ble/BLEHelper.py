@@ -7,7 +7,7 @@ class BLEHelper(object):
     def __init__(self):
         self.scanner = Scanner().withDelegate(ScanDelegate())
         
-    def startScan(self, timeout=1000000):
+    def startScan(self, timeout=10):
         self.scanner.scan(timeout)
         
     def stopScan(self):
