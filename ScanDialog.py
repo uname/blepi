@@ -29,6 +29,7 @@ class ScanDialog(QtGui.QDialog):
     
     def onBLEInfoUpdate(self, addr, rssi):
         logger.debug("BLE -> %s(%d)" % (addr, rssi))
+        self.ui.bleListWidget.updateBLEDevice(addr, rssi)
         
     def setUiOnShow(self):
         self.ui.tipLabel.setText("Scanning...")
